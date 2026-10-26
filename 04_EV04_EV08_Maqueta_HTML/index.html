@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Maqueta académica responsive de Autodealer System"
+    >
+    <title>Iniciar sesión | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="dashboard.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="dashboard.html">Inicio</a>
+          <a href="inventory.html">Inventario</a>
+          <a href="vehicle.html">Registrar vehículo</a>
+          <a href="customer.html">Registrar cliente</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="card narrow">
+        <p class="eyebrow">Acceso al sistema</p>
+        <h1>Iniciar sesión</h1>
+        <p class="muted">
+          Ingresa tus datos para continuar. Esta versión es una maqueta académica.
+        </p>
+
+        <form id="login-form" data-demo-form novalidate>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="username"
+              placeholder="usuario@concesionario.com"
+              required
+            >
+            <span class="help">Usa un formato como nombre@dominio.com.</span>
+          </div>
+
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="4"
+              required
+            >
+          </div>
+
+          <div class="message" aria-live="polite"></div>
+
+          <button type="submit">Validar acceso</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrar vehículo | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="dashboard.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="dashboard.html">Inicio</a>
+          <a href="inventory.html">Inventario</a>
+          <a aria-current="page" href="vehicle.html">Registrar vehículo</a>
+          <a href="customer.html">Registrar cliente</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a class="back" href="inventory.html">← Volver al inventario</a>
+
+      <section class="card">
+        <p class="eyebrow">Módulo de vehículos</p>
+        <h1>Registrar vehículo</h1>
+        <p class="muted">
+          Completa los campos obligatorios marcados con *. La información solo
+          se valida en esta demostración.
+        </p>
+
+        <form id="vehicle-form" data-demo-form novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="brand">Marca *</label>
+              <input
+                id="brand"
+                name="brand"
+                required
+                maxlength="40"
+                placeholder="Ej. Toyota"
+              >
+            </div>
+
+            <div class="field">
+              <label for="model">Modelo *</label>
+              <input
+                id="model"
+                name="model"
+                required
+                maxlength="50"
+                placeholder="Ej. Corolla"
+              >
+            </div>
+
+            <div class="field">
+              <label for="year">Año *</label>
+              <input
+                id="year"
+                name="year"
+                type="number"
+                min="1900"
+                max="2027"
+                step="1"
+                required
+                placeholder="2024"
+              >
+            </div>
+
+            <div class="field">
+              <label for="price">Precio en pesos colombianos (COP) *</label>
+              <input
+                id="price"
+                name="price"
+                type="number"
+                min="0"
+                step="1000"
+                required
+                placeholder="75000000"
+              >
+            </div>
+
+            <div class="field">
+              <label for="km">Kilometraje (km) *</label>
+              <input
+                id="km"
+                name="km"
+                type="number"
+                min="0"
+                step="1"
+                required
+                placeholder="25000"
+              >
+            </div>
+
+            <div class="field">
+              <label for="status">Estado *</label>
+              <select id="status" name="status" required>
+                <option value="">Selecciona un estado</option>
+                <option>Disponible</option>
+                <option>Reservado</option>
+                <option>Vendido</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="message" aria-live="polite"></div>
+
+          <div class="actions">
+            <button type="submit">Validar y guardar (demo)</button>
+            <a class="button secondary" href="inventory.html">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>

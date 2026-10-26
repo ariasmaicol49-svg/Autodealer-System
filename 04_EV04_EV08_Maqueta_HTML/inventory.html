@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventario | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="dashboard.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="dashboard.html">Inicio</a>
+          <a aria-current="page" href="inventory.html">Inventario</a>
+          <a href="vehicle.html">Registrar vehículo</a>
+          <a href="customer.html">Registrar cliente</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a class="back" href="dashboard.html">← Volver al Inicio</a>
+      <p class="eyebrow">Módulo de vehículos</p>
+      <h1>Inventario de vehículos</h1>
+      <p class="muted">
+        Listado ficticio para demostrar la navegación y el filtro local.
+      </p>
+
+      <div class="toolbar">
+        <div class="field">
+          <label for="vehicle-search">Buscar por marca, modelo o estado</label>
+          <input
+            id="vehicle-search"
+            type="search"
+            placeholder="Ej. Toyota, Corolla, Disponible"
+          >
+        </div>
+        <a class="button" href="vehicle.html">+ Registrar vehículo</a>
+      </div>
+
+      <div class="table-wrap">
+        <table id="vehicle-table">
+          <thead>
+            <tr>
+              <th>Vehículo</th>
+              <th>Año</th>
+              <th>Precio (COP)</th>
+              <th>Kilometraje</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Toyota Corolla</td>
+              <td>2022</td>
+              <td>$78.000.000</td>
+              <td>28.000 km</td>
+              <td><span class="pill">Disponible</span></td>
+            </tr>
+            <tr>
+              <td>Chevrolet Onix</td>
+              <td>2023</td>
+              <td>$62.000.000</td>
+              <td>15.500 km</td>
+              <td><span class="pill">Reservado</span></td>
+            </tr>
+            <tr>
+              <td>Mazda CX-30</td>
+              <td>2021</td>
+              <td>$89.000.000</td>
+              <td>34.000 km</td>
+              <td><span class="pill">Vendido</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small-note">
+        Los datos son ejemplos estáticos. El buscador filtra las filas visibles,
+        pero los formularios no actualizan este inventario.
+      </p>
+    </main>
+
+      <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registrar cliente | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="dashboard.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="dashboard.html">Inicio</a>
+          <a href="inventory.html">Inventario</a>
+          <a href="vehicle.html">Registrar vehículo</a>
+          <a aria-current="page" href="customer.html">Registrar cliente</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a class="back" href="dashboard.html">← Volver al Inicio</a>
+
+      <section class="card">
+        <p class="eyebrow">Módulo de clientes</p>
+        <h1>Registrar cliente</h1>
+        <p class="muted">Usa datos ficticios para probar el formulario.</p>
+
+        <form id="customer-form" data-demo-form novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="name">Nombre completo *</label>
+              <input
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="100"
+                placeholder="Nombre y apellidos"
+              >
+            </div>
+
+            <div class="field">
+              <label for="document">Número de documento *</label>
+              <input
+                id="document"
+                name="document"
+                inputmode="numeric"
+                required
+                maxlength="20"
+                placeholder="Documento de ejemplo"
+              >
+            </div>
+
+            <div class="field">
+              <label for="phone">Teléfono *</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                maxlength="20"
+                placeholder="Número de contacto"
+              >
+            </div>
+
+            <div class="field">
+              <label for="customer-email">Correo electrónico *</label>
+              <input
+                id="customer-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="cliente@correo.com"
+              >
+            </div>
+          </div>
+
+          <div class="message" aria-live="polite"></div>
+
+          <div class="actions">
+            <button type="submit">Validar registro (demo)</button>
+            <a class="button secondary" href="dashboard.html">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+     <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>
