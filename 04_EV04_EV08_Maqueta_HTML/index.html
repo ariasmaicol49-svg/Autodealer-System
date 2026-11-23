@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Maqueta académica responsive de Autodealer System"
-    >
-    <title>Iniciar sesión | Autodealer System</title>
+      content="Maqueta académica responsive de Autodealer System">
+     <title>Inicio | Autodealer System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
@@ -15,55 +14,46 @@
   <body>
     <header class="topbar">
       <div class="topbar-inner">
-        <a class="brand" href="dashboard.html">Autodealer System</a>
+        <a class="brand" href="index.html">Autodealer System</a>
 
         <nav class="nav" aria-label="Principal">
-          <a href="dashboard.html">Inicio</a>
-          <a href="inventory.html">Inventario</a>
-          <a href="vehicle.html">Registrar vehículo</a>
-          <a href="customer.html">Registrar cliente</a>
+          <a aria-current="page" href="index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="contacto.html">Cotizador</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="card narrow">
-        <p class="eyebrow">Acceso al sistema</p>
-        <h1>Iniciar sesión</h1>
-        <p class="muted">
-          Ingresa tus datos para continuar. Esta versión es una maqueta académica.
-        </p>
+      <p class="eyebrow">Bienvenido</p>
+      <h1>Autodealer System</h1>
+      <p class="muted">
+        Explora nuestro catálogo y agenda tu cita para adquirir tu próximo vehículo.
+      </p>
 
-        <form id="login-form" data-demo-form novalidate>
-          <div class="field">
-            <label for="email">Correo electrónico</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autocomplete="username"
-              placeholder="usuario@concesionario.com"
-              required
-            >
-            <span class="help">Usa un formato como nombre@dominio.com.</span>
-          </div>
+     
+      <h2>Accesos rápidos</h2>
+      <section class="grid">
+        <a class="module" href="catalogo.html">
+          <h2>Catálogo</h2>
+          <p>Consultar el listado, precios y cotizar vehículos.</p>
+        </a>
 
-          <div class="field">
-            <label for="password">Contraseña</label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              autocomplete="current-password"
-              minlength="4"
-              required
-            >
-          </div>
+        <a class="module" href="contacto.html">
+          <h2>Agenda tu Cita</h2>
+          <p>Agendar una cita para la compra.</p>
+        </a>
+        
+        <a class="module" href="#">
+          <h2>Simular Crédito</h2>
+          <p>Simular un crédito para la compra de un vehículo.</p>
+        </a>
 
-          <div class="message" aria-live="polite"></div>
+        <a class="module" href="indexadmin.html">
+          <h2>Modulo Administrador</h2>
+          <p>Acceder al módulo de administración del sistema.</p>
+        </a>
 
-          <button type="submit">Validar acceso</button>
-        </form>
       </section>
     </main>
 

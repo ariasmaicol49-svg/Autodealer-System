@@ -79,16 +79,86 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const search = document.querySelector("#vehicle-search");
+  const search = document.querySelector("#vehicle-search, #usuario-search");
 
   if (search) {
     search.addEventListener("input", () => {
       const query = search.value.toLocaleLowerCase();
-      const rows = document.querySelectorAll("#vehicle-table tbody tr");
+      const rows = document.querySelectorAll("#vehicle-table tbody tr, #usuario-table tbody tr");
+      
 
       rows.forEach((row) => {
         row.hidden = !row.innerText.toLocaleLowerCase().includes(query);
       });
     });
   }
+
+
+
+  const creditForm = document.querySelector("#credit-form");
+
+  if (creditForm) {
+    const creditMessage = document.querySelector("#credit-message");
+    const financedOutput = document.querySelector("#financiado");
+    const paymentOutput = document.querySelector("#cuota");
+    const clearButton = document.querySelector("#credit-clear");
+
+    const formatCurrency = (value) =>
+      `$${Math.round(value).toLocaleString("es-CO")}`;
+
+    creditForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const valor = Number(creditForm.elements.valor.value);
+      const cuotaInicial = Number(creditForm.elements.cuotaInicial.value);
+      const plazo = Number(creditForm.elements.plazo.value);
+      const tasa = Number(creditForm.elements.tasa.value);
+
+      if (!creditForm.checkValidity()) {
+        setMessage(
+          creditMessage,
+          "Completa todos los campos obligatorios para simular el crédito.",
+          "error",
+        );
+        return;
+      }
+
+      if (valor <= 0 || cuotaInicial < 0 || cuotaInicial > 100 || plazo <= 0 || tasa < 0) {
+        setMessage(
+          creditMessage,
+          "Verifica los valores ingresados. Revisa monto, porcentaje, plazo y tasa.",
+          "error",
+        );
+        return;
+      }
+
+      const inicial = valor * (cuotaInicial / 100);
+      const financiado = valor - inicial;
+      const tasaMensual = (tasa / 100) / 12;
+
+      let cuotaMensual = 0;
+
+      if (tasaMensual === 0) {
+        cuotaMensual = financiado / plazo;
+      } else {
+        cuotaMensual =
+          (financiado * tasaMensual) /
+          (1 - Math.pow(1 + tasaMensual, -plazo));
+      }
+
+      financedOutput.textContent = formatCurrency(financiado);
+      paymentOutput.textContent = formatCurrency(cuotaMensual);
+      setMessage(creditMessage, "Simulación calculada correctamente.", "success");
+    });
+
+    clearButton.addEventListener("click", () => {
+      creditForm.reset();
+      financedOutput.textContent = "$0";
+      paymentOutput.textContent = "$0";
+      creditMessage.className = "message";
+      creditMessage.textContent = "";
+      creditMessage.removeAttribute("role");
+    });
+  }
 });
+

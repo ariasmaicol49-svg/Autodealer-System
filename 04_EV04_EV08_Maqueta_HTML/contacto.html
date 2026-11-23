@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Maqueta académica responsive de Autodealer System">
+     <title>Cotizador | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="index.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="catalogo.html">Catálogo</a>
+          <a href="contacto.html" aria-current="page">Cotizador</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section>
+      <h1>Contáctenos</h1>
+      <p>Estamos aquí para ayudarte con cualquier consulta sobre nuestros vehículos y servicios.</p>
+    </section>
+      <section class="contact-boxes" aria-label="Canales de contacto">
+        <article class="contact-box">
+          <div class="contact-icon">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24" >
+              <path d="M20.5 11.2c0 4.9-4 8.8-8.8 8.8-1.6 0-3.1-.4-4.5-1.2L3 20l1.2-4.1a8.8 8.8 0 1 1 16.3-4.7Z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="m9.1 8.9.6 1.6c.1.3 0 .6-.2.8l-.5.5a.9.9 0 0 0-.2 1c.5 1.2 1.5 2.2 2.7 2.7.4.2.8.1 1-.2l.5-.5c.2-.2.5-.3.8-.2l1.6.6c.4.2.7.6.6 1l-.2 1.2c-.1.5-.5.9-1 .9a8.6 8.6 0 0 1-8-8c0-.5.4-.9.9-1l1.2-.2c.4-.1.8.2 1 .6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Whatsapp</h2>
+          <p>Empieza a chatear con uno de nuestros agentes.</p>
+          <a target="_blank" class="contact-pill" href="https://wa.me/+57319443013">Chatear</a>
+        </article>
+
+        <article class="contact-box">
+          <div class="contact-icon">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24">
+              <path d="M21 16.2v2a2 2 0 0 1-2.2 2 17.5 17.5 0 0 1-7.6-2.7 17.2 17.2 0 0 1-5.3-5.3A17.5 17.5 0 0 1 3.2 4.6 2 2 0 0 1 5.1 2.4h2a2 2 0 0 1 2 1.7l.3 2.3a2 2 0 0 1-.6 1.7l-1 1c1.2 2.1 2.9 3.8 5 5l1-1a2 2 0 0 1 1.7-.6l2.3.3a2 2 0 0 1 1.7 2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Teléfono</h2>
+          <p>Nuestros horarios de atención son de lunes a viernes de 8:00am a 5:00pm y sábados de 8:00am a 2:00pm.</p>
+          <a class="contact-pill" href="tel:+573219913106">321-991-3106</a>
+        </article>
+
+        <article class="contact-box">
+          <div class="contact-icon">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24">
+              <path d="M4 7h16v10H4z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/>
+              <path d="m4 8 8 5 8-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>E-mail</h2>
+          <p>Envía tu consulta a:</p>
+          <a class="contact-pill contact-pill-email" href="mailto:autodealersystem@gmail.com">
+            autodealersystem@gmail.com
+          </a>
+        </article>
+      </section>
+      <p class="small-note contact-note">O puedes escribirnos, pronto nos pondremos en contacto para dar respuesta a tu solicitud.</p>
+
+      <section  aria-label="Formulario de contacto">
+        <form id="contact-form" data-demo-form novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="contact-nombres">Nombres *</label>
+              <input name="nombres" type="text" required> 
+            </div>
+
+            <div class="field">
+              <label for="contact-apellidos">Apellidos *</label>
+              <input name="apellidos" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="contact-documento-tipo">Tipo de documento *</label>
+              <select name="documento-tipo" required>
+                <option value="">Selecciona un tipo</option>
+                <option>Cédula de ciudadanía</option>
+                <option>Cédula de extranjería</option>
+                <option>Pasaporte</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="contact-documento">Documento *</label>
+              <input  name="documento" type="text" required>
+            </div>
+
+            <div class="field">
+              <label for="contact-email">Correo electrónico *</label>
+              <input  name="email" type="email" required  placeholder="cliente@correo.com">
+            </div>
+
+            <div class="field">
+              <label for="contact-telefono">Teléfono *</label>
+              <input  name="telefono" type="tel" required>
+            </div>
+
+            <div class="field">
+              <label for="contact-ciudad">Ciudad *</label>
+              <select  name="ciudad" required >
+                <option value="">Elige una ciudad</option>
+                <option>Bogotá</option>
+                <option>Medellín</option>
+                <option>Cali</option>
+                <option>Barranquilla</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="contact-concesionario">Concesionario *</label>
+              <select name="concesionario" required>
+                <option value="">Elige un concesionario</option>
+                <option>Autodealer Centro</option>
+                <option>Autodealer Norte</option>
+                <option>Autodealer Sur</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="contact-modelo">Modelo *</label>
+              <select name="modelo" required>
+                <option value="">Selecciona un modelo</option>
+                <option>Toyota Yaris HB</option>
+                <option>Toyota Corolla</option>
+                <option>Toyota RAV4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="contact-mensaje">Mensaje</label>
+            <textarea name="mensaje" rows="5" placeholder="Agregar un mensaje (Opcional)"></textarea>
+          </div>
+
+          <div class="contact-consent">
+            <p class="contact-consent-text">
+              Los datos personales que le solicitamos tienen como finalidad mantener una constante comunicación con nuestros clientes, así como de nuestros aliados estratégicos, mediante llamada telefónica, mensaje de texto o correo electrónico.
+            </p>
+
+            <label class="contact-check">
+              <input type="checkbox" name="autorizacion-datos" required>
+              <span>Autorizo el manejo de datos pendientes (Requerido para el trámite)</span>
+            </label>
+
+            <label class="contact-check">
+              <input type="checkbox" name="autorizacion-comercial" required>
+              <span>Autoriza el uso de sus datos para envío de MSN correos electrónicos y llamadas con fines comerciales y tributarios. (Requerido para este trámite)</span>
+            </label>
+
+            <label class="contact-check">
+              <input type="checkbox" name="autorizacion-mercadeo">
+              <span>Autoriza el uso de sus datos para envío de MSN correos electrónicos y llamadas con fines de mercadeo</span>
+            </label>
+
+            <p class="contact-terms">
+              Para más información consulta <a href="#">Términos y Condiciones.</a>
+            </p>
+          </div>
+
+            <div class="message" aria-live="polite"></div>
+
+          <div class="actions">
+            <button type="submit">Validar y guardar</button>
+            <a class="button secondary" href="index.html">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>

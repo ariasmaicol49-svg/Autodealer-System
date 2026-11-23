@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Usuarios | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="indexadmin.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="indexadmin.html">Inicio</a>
+          <a href="inventario.html">Inventario</a>
+          <a aria-current="page" href="usuarios.html">Usuarios</a>
+          <a href="ventas.html">Ventas</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a class="back" href="indexadmin.html">← Volver al Inicio</a>
+      <p class="eyebrow">Módulo de usuarios</p>
+      <h1>Gestión de usuarios</h1>
+      <p class="muted">
+        Aquí puedes ver y gestionar todos los usuarios del sistema.
+      </p>
+
+
+
+      <div class="toolbar">
+        <div class="field">
+          <label for="usuario-search">Buscar por nombre, correo o rol</label>
+          <input
+            id="usuario-search"
+            type="search"
+            placeholder="Ej. Juan, juan@correo.com, Administrador"
+          >
+        </div>
+        <a class="button" href="registrousuario.html">+ Registrar vehículo</a>
+      </div>
+
+      <div class="table-wrap">
+        <table id="usuario-table">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Correo</th>
+              <th>Rol</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Juan Pérez</td>
+              <td>juan@correo.com</td>
+              <td>Administrador</td>
+              <td class="actions-cell">
+                <a class="action-icon" title="Editar"  href="editarusuario.html">
+                  <img src="image/editar.ico" alt="Editar">
+                </a>
+                <a class="action-icon" title="Eliminar"  href="#">
+                  <img src="image/delete.ico" alt="Eliminar">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>María Gómez</td>
+              <td>maria@correo.com</td>
+              <td>Vendedor</td>
+              <td class="actions-cell">
+                <a class="action-icon" title="Editar"  href="editarusuario.html">
+                  <img src="image/editar.ico" alt="Editar">
+                </a>
+                <a class="action-icon" title="Eliminar"  href="#">
+                  <img src="image/delete.ico" alt="Eliminar">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Carlos López</td>
+              <td>carlos@correo.com</td>
+              <td>Vendedor</td>
+              <td class="actions-cell">
+                <a class="action-icon" title="Editar"  href="editarusuario.html">
+                  <img src="image/editar.ico" alt="Editar">
+                </a>
+                <a class="action-icon" title="Eliminar"  href="#">
+                  <img src="image/delete.ico" alt="Eliminar">
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ana Martínez</td>
+              <td>ana@correo.com</td>
+              <td>Administrador</td>
+              <td class="actions-cell">
+                <a class="action-icon" title="Editar" href="editarusuario.html">
+                  <img src="image/editar.ico" alt="Editar">
+                </a>
+                <a class="action-icon" title="Eliminar"  href="#">
+                  <img src="image/delete.ico" alt="Eliminar">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    </main>
+
+      <footer class="footer">
+      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    </footer>
+  </body>
+</html>
