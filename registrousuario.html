@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Editar Usuario | Autodealer System</title>
+    <title>Registrar Usuario | Autodealer System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
@@ -18,6 +18,7 @@
           <a href="inventario.html">Inventario</a>
           <a href="usuarios.html">Usuarios</a>
           <a href="ventas.html">Ventas</a>
+          <a href="index.html">Logout</a>
         </nav>
       </div>
     </header>
@@ -27,13 +28,13 @@
 
       <section class="divcard">
         <p class="eyebrow">Módulo de usuarios</p>
-        <h1>Editar usuario</h1>
-        <p class="muted">Modifica la información del usuario según sea necesario.</p>
+        <h1>Registrar usuario</h1>
+        <p class="muted"> Completa los campos obligatorios marcados con *.</p>
 
         <form id="customer-form" data-demo-form novalidate>
           <div class="grid">
             <div class="field">
-              <label for="name">Nombre completo</label>
+              <label for="name">Nombre completo *</label>
               <input
                 id="name"
                 name="name"
@@ -45,7 +46,7 @@
             </div>
 
             <div class="field">
-              <label for="document">Número de documento</label>
+              <label for="document">Número de documento *</label>
               <input
                 id="document"
                 name="document"
@@ -57,7 +58,7 @@
             </div>
 
             <div class="field">
-              <label for="phone">Teléfono</label>
+              <label for="phone">Teléfono *</label>
               <input
                 id="phone"
                 name="phone"
@@ -70,7 +71,7 @@
             </div>
 
             <div class="field">
-              <label for="customer-email">Correo electrónico</label>
+              <label for="customer-email">Correo electrónico *</label>
               <input
                 id="customer-email"
                 name="email"
@@ -92,8 +93,12 @@
       </section>
     </main>
 
-     <footer class="footer">
-      Prototipo académico · Autodealer System - Jose Michael Cardenas
+      <footer class="carro-footer">
+      <div class="carro-footer-inner">
+        <div>
+          <p class="carro-footer-copy">© 2026 Autodealer. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

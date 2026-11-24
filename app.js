@@ -92,6 +92,84 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  /** Inicio de la sección de hero-banner */
+  const heroBanner = document.querySelector(".hero-banner");
+
+  if (heroBanner) {
+    const slides = Array.from(heroBanner.querySelectorAll(".hero-slide"));
+    const dots = Array.from(heroBanner.querySelectorAll(".hero-dot"));
+    const prevButton = heroBanner.querySelector(".hero-control.prev");
+    const nextButton = heroBanner.querySelector(".hero-control.next");
+    let currentIndex = slides.findIndex((slide) => slide.classList.contains("is-active"));
+    let autoplayId = null;
+    let autoplayEnabled = true;
+
+    if (currentIndex < 0) {
+      currentIndex = 0;
+    }
+
+    const showSlide = (index) => {
+      slides.forEach((slide, position) => {
+        slide.classList.toggle("is-active", position === index);
+      });
+
+      dots.forEach((dot, position) => {
+        dot.classList.toggle("is-active", position === index);
+      });
+
+      currentIndex = index;
+    };
+
+    const goToNext = () => {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      showSlide(nextIndex);
+    };
+
+    const goToPrevious = () => {
+      const previousIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(previousIndex);
+    };
+
+    const restartAutoplay = () => {
+      window.clearInterval(autoplayId);
+
+      if (!autoplayEnabled || slides.length < 2) {
+        return;
+      }
+
+      autoplayId = window.setInterval(goToNext, 5000);
+    };
+
+    showSlide(currentIndex);
+    restartAutoplay();
+
+    prevButton?.addEventListener("click", () => {
+      goToPrevious();
+      restartAutoplay();
+    });
+
+    nextButton?.addEventListener("click", () => {
+      goToNext();
+      restartAutoplay();
+    });
+
+    dots.forEach((dot, position) => {
+      dot.addEventListener("click", () => {
+        showSlide(position);
+        restartAutoplay();
+      });
+    });
+
+    heroBanner.addEventListener("mouseenter", () => {
+      autoplayEnabled = false;
+      window.clearInterval(autoplayId);
+    });
+
+    heroBanner.addEventListener("mouseleave", () => {
+      autoplayEnabled = true;
+      restartAutoplay();
+    });
+  }
 
 
 

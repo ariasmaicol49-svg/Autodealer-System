@@ -6,7 +6,7 @@
     <meta
       name="description"
       content="Maqueta académica responsive de Autodealer System">
-    <title>Registrar vehículo | Autodealer System</title>
+    <title>Registrar venta | Autodealer System</title>
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
   </head>
@@ -21,16 +21,17 @@
           <a href="inventario.html">Inventario</a>
           <a href="usuarios.html">Usuarios</a>
           <a href="ventas.html">Ventas</a>
+          <a href="index.html">Logout</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <a class="back" href="inventario.html">← Volver al inventario</a>
+      <a class="back" href="indexadmin.html">← Volver al inicio</a>
 
       <section class="divcard">
-        <p class="eyebrow">Módulo de vehículos</p>
-        <h1>Registrar vehículo</h1>
+        <p class="eyebrow">Módulo de ventas</p>
+        <h1>Registrar venta</h1>
         <p class="muted">
           Completa los campos obligatorios marcados con *.
         </p>
@@ -107,6 +108,69 @@
                 <option>Vendido</option>
               </select>
             </div>
+
+          <div class="field">
+              <label for="color">Color *</label>
+              <input
+                id="color"
+                name="color"
+                type="text"
+                required
+                placeholder="Rojo"
+              >
+            </div>
+             <div class="field">
+              <label for="tipovehiculo">Tipo Vehiculo *</label>
+              <select id="tipovehiculo" name="tipovehiculo" required>
+                <option value="">Selecciona un tipo de vehículo</option>
+                <option>Automóvil</option>
+                <option>Motocicleta</option>
+                <option>Camioneta</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="nombrecomprador">Nombre del comprador *</label>
+              <input
+                id="nombrecomprador"
+                name="nombrecomprador"
+                type="text"
+                required
+                placeholder="Juan Pérez"
+              >
+            </div>
+             <div class="field">
+              <label for="telefonousuario">Teléfono *</label>
+              <input
+                id="telefonousuario"
+                name="telefonousuario"
+                type="tel"
+                autocomplete="tel"
+                required
+                maxlength="20"
+                placeholder="Número de contacto"
+              >
+            </div>
+            <div class="field">
+              <label for="emailusuario">Correo electrónico *</label>
+              <input
+                id="emailusuario"
+                name="emailusuario"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="cliente@correo.com"
+              >
+            </div>
+             <div class="field">
+              <label for="ciudadusuario">Ciudad *</label>
+              <input
+                id="ciudadusuario"
+                name="ciudadusuario"
+                type="text"
+                required
+                placeholder="Ciudad del comprador"
+              >
+            </div>
           </div>
 
           <div class="message" aria-live="polite"></div>
@@ -119,8 +183,12 @@
       </section>
     </main>
 
-    <footer class="footer">
-      Prototipo académico · Autodealer System - Jose Michael Cardenas
+    <footer class="carro-footer">
+      <div class="carro-footer-inner">
+        <div>
+          <p class="carro-footer-copy">© 2026 Autodealer. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

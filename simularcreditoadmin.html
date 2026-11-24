@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Maqueta académica responsive de Autodealer System">
+    <title>Simular Crédito | Autodealer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="indexadmin.html">Autodealer System</a>
+
+        <nav class="nav" aria-label="Principal">
+          <a href="indexadmin.html">Inicio</a>
+          <a href="inventario.html">Inventario</a>
+          <a href="usuarios.html">Usuarios</a>
+          <a href="ventas.html">Ventas</a>
+          <a href="index.html">Logout</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <a class="back" href="indexadmin.html">← Volver al Inicio</a>
+      <h1>Simulación de crédito</h1>
+      <p class="muted">
+        Calcula el valor aproximado de las cuotas para la venta de un vehículo.
+      </p>
+
+      <section class="divcard">
+        <form id="credit-form" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label for="valor">Valor del vehículo *</label>
+              <input id="valor" name="valor" type="number" min="0" step="1000" placeholder="70000000" required>
+            </div>
+
+            <div class="field">
+              <label for="cuotaInicial">Cuota inicial (%) *</label>
+              <input id="cuotaInicial" name="cuotaInicial" type="number" min="0" max="100" step="1" placeholder="20" required>
+            </div>
+
+            <div class="field">
+              <label for="plazo">Plazo (meses) *</label>
+              <select id="plazo" name="plazo" required>
+                <option value="12">12 meses</option>
+                <option value="24">24 meses</option>
+                <option value="36">36 meses</option>
+                <option value="48">48 meses</option>
+                <option value="60">60 meses</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="tasa">Tasa de interés anual (%) *</label>
+              <input id="tasa" name="tasa" type="number" min="0" step="0.1" value="12" required>
+            </div>
+          </div>
+
+          <div class="message" id="credit-message" aria-live="polite"></div>
+
+          <div class="actions">
+            <button type="submit">Simular crédito</button>
+            <button class="button secondary" type="button" id="credit-clear">Limpiar</button>
+          </div>
+        </form>
+
+        <section class="credit-result" aria-live="polite">
+          <h2>Resultado de la simulación</h2>
+          <p class="credit-row">Valor financiado: <strong id="financiado">$0</strong></p>
+          <p class="credit-row">Cuota mensual aproximada: <strong id="cuota">$0</strong></p>
+        </section>
+      </section>
+    </main>
+
+     <footer class="carro-footer">
+      <div class="carro-footer-inner">
+        <div>
+          <p class="carro-footer-copy">© 2026 Autodealer. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
